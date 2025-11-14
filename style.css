@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(0, 43, 72);
+    height: 200vh;
+}
+
+.square {
+  background-color: #ffffff;
+  width: 100%;
+  height: 50px;
+  border: 3px solid #00092f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.circle {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  width: 80%;
+  height: 50px;
+}
