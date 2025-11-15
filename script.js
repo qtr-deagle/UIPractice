@@ -1,10 +1,10 @@
 window.addEventListener('scroll', function () {
-  const box = document.getElementById('myBox');
+  const box = document.getElementById('NavBar');
   const triggerLine = 50;
 
   if (window.scrollY > triggerLine) {
-    box.classList.add('circle');
+    box.classList.add('square');
   } else {
-    box.classList.remove('circle');
+    box.classList.remove('square');
   }
 });
