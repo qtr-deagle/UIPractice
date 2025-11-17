@@ -7,8 +7,14 @@ body {
   scroll-behavior: smooth;
 }
 
+@media only screen and (max-width: 1023px) {
+  body.scroll #cs-navigation:before {
+    border-radius: 0;
+  }
+}
+
 @media only screen and (min-width: 1024px) {
-  body.scroll .cs-navigation {
+  body.scroll #cs-navigation {
     top: 0;
     border-radius: 0;
     max-width: 100%;
@@ -16,22 +22,119 @@ body {
   }
 }
 
-
 @media only screen and (min-width: 1024px) {
-  .cs-navigation {
-    position: relative;
+  #cs-navigation {
+    position: fixed;
     background-color: #030f18;
     width: 94%;
+    max-width: 90rem;
     height: 6rem;
     top: 2rem;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    position: fixed;
     left: 50%;
-    transition: top 0.3s, border-radius 0.3s, width 0.3s, max-width 0.3s, background-color 0.3s;
-    z-index: 1;
-    box-sizing: border-box;
-    border-radius: clamp(0.75rem, 2vw, 1.5rem);
     transform: translateX(-50%);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: clamp(0.75rem, 2vw, 1.5rem);
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 1;
+    transition: top 0.3s, border-radius 0.3s, width 0.3s, max-width 0.3s, background-color 0.3s;
+  }
+}
+
+/* @media only screen and (max-width: 1023px) {
+  #cs-navigation:before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    content: "";
+    opacity: 1;
+    transform: translateX(-50%);
+    display: block;
+    border-radius: clamp(0.75rem, 2vw, 1.5rem);
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.2s, border-radius 0.3s, background-color 0.3s ease-in-out;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+} */
+
+/* @media only screen and (min-width: 1024px) {
+    #cs-navigation {
+        z-index: 10000;
+        position: fixed;
+        top: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        border-radius: clamp(0.75rem, 2vw, 1.5rem);
+        background-color: #fff;
+        height: 6rem;
+        max-width: 90rem;
+        width: 94%;
+        box-sizing: border-box;
+        padding: clamp(0.75rem, 2vw, 1.5rem) 0;
+        transition: top 0.3s, border-radius 0.3s, width 0.3s, max-width 0.3s, background-color 0.3s;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+} */
+
+/* @media only screen and (max-width: 1023px) {
+    #cs-navigation {
+        z-index: 10000;
+        position: fixed;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: clamp(0.75rem, 2vw, 1.5rem);
+        max-width: 80rem;
+        width: 94%;
+        box-sizing: border-box;
+        padding: clamp(0.75rem, 2vw, 1.5rem);
+        transition: top 0.3s, border-radius 0.3s, width 0.3s, max-width 0.3s;
+    }
+} */
+
+@media only screen and (max-width: 1023px) {
+  #cs-navigation {
+    z-index: 10000;
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: clamp(0.75rem, 2vw, 1.5rem);
+    max-width: 80rem;
+    height: 6rem;
+    width: 94%;
+    box-sizing: border-box;
+    padding: clamp(0.75rem, 2vw, 1.5rem);
+    transition: top 0.3s, border-radius 0.3s, width 0.3s, max-width 0.3s, background-color 0.3s;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  body.scroll #cs-navigation {
+    top: 0;
+    border-radius: 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  #cs-navigation:before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    content: "";
+    opacity: 1;
+    transform: translateX(-50%);
+    display: block;
+    border-radius: clamp(0.75rem, 2vw, 1.5rem);
+    background: #030f18;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.2s, border-radius 0.3s, background-color 0.3s ease-in-out;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
 }
 
@@ -50,11 +153,11 @@ body {
   height: auto;
   max-width: 80px;
   max-height: 80px;
+  margin-left: clamp(10px, 5vw, 20px);
 }
 
-
 @media (max-width: 1025px) {
-  .logo img {
+  .logo {
     width: 40px;
     max-width: 60px;
   }
